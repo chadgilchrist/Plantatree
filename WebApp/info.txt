@@ -1,0 +1,11 @@
+Main Colours:
+
+#7bd75a - light green
+#72ef36 - green
+#3b3141 - dark purple
+#f0ece6 - light grey
+
+
+Extra Colours:
+
+#FFF - white
