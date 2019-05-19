@@ -12,8 +12,6 @@
   <ul>
     <li><a href="/">Home</a></li>
     <li><a href="/listings">Listings</a></li>
-    <li><a style="text-align:center" href="/login">Login</a></li>
-
   </ul>
 
   <div class="w3-container w3-red">
@@ -21,8 +19,11 @@
   </div>
 
   <div class="w3-container">
-    <p>A Tree is a  self-powered motor vehicle used for transportation.
-      Most definitions of the term specify that cars are designed to run primarily on roads. (Wikipedia)</p>
+    <form>
+  	  <label>Username: <input type="text" name="namefield"> </label>
+  	  <label><br>Password: <input type="text" name="pwdfield"> <br><br> </label>
+  	  <input name="submit" type="button" onClick="getData('data.php','targetDiv', namefield.value, pwdfield.value) " value="Login">
+  	</form>
   </div>
 
   <div class="w3-container w3-red">
