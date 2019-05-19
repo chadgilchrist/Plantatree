@@ -7,7 +7,6 @@ function getData(dataSource, divID, aName, aPwd) {
 
 
     xhr.onreadystatechange = function() {
-		alert(xhr.readyState);
       if (xhr.readyState == 4 && xhr.status == 200) {
         obj.innerHTML = xhr.responseText;
       } //
