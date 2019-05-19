@@ -13,7 +13,7 @@
 		$name= $_POST['name'];
 		$pwd = $_POST['pwd'];
 
-		$query = "SELECT * FROM test";
+		$query = "SELECT * FROM test;";
 		//$query = "SELECT * FROM test WHERE pwd = '".$pwd."' ";
 
 		$result = mysqli_query($connection, $query);
@@ -27,6 +27,8 @@
 				echo "<table border=\"1\">";
 				echo "<tr>\n"
 					 ."<th scope=\"col\">ID</th>\n"
+				   ."<th scope=\"col\">First Name</th>\n"
+					 ."<th scope=\"col\">Last Name</th>\n"
 					 ."</tr>\n";
 
 				while ($row = mysqli_fetch_assoc($result)){
