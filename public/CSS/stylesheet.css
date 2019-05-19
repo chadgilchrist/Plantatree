@@ -1,13 +1,21 @@
+
+body {
+  background-color: #f0ece6;
+}
+
 .w3-container {
   padding:0.01em 16px;
   font-family: Verdana;
   font-size:15px;
-  line-height:1.5
+  line-height:1.5;
+  width: 868px;
+  margin: auto;
 }
 
 .w3-red {
   color: #fff;
   background-color: #7bd75a;
+
 }
 
 ul {
@@ -17,6 +25,8 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #333;
+  width: 900px;
+  margin: auto;
 }
 
 li {
@@ -31,9 +41,42 @@ li a {
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
 li a:hover {
   background-color: #111;
+}
+
+.footer {
+
+  width: 900px;
+  height: auto;
+  margin: auto;
+
+}
+
+.footer-ul {
+  list-style-type: none;
+  font-family: Verdana;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.footer-li {
+  float: left;
+}
+
+.footer-li a {
+  font-size: 9px;
+  display: block;
+  color: white;
+  text-align: center;
+  margin-right: 150px;
+  padding: 6px 14px;
+  text-decoration: none;
+}
+
+.footer-a:hover {
+
 }
 
 .tree-header {
@@ -47,3 +90,46 @@ li a:hover {
 .tree-body {
   padding:0.01em 16px;
 }
+
+/*
+
+drop downbox
+
+
+
+ul li ul li {
+  list-style-type: none;
+  font-family: Verdana;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul li ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li ul li:hover {
+  background: #111;
+}
+
+ul li {
+  display: inline-block;
+}
+
+ul li:hover ul {
+  display: block;
+}
+
+ul li ul {
+  position: absolute;
+  width: 150px;
+  display: none;
+}
+
+*/
