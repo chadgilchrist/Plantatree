@@ -4,7 +4,7 @@
   "description": "ESNE702 Assignment",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -17,9 +17,7 @@
   },
   "homepage": "https://github.com/Rainingtacoz/Plantatree#readme",
   "dependencies": {
-    "express": "^4.17.0"
-  },
-  "scripts":{
-    "start": "node index.js"
+    "express": "^4.17.0",
+    "mysql": "^2.17.1"
   }
 }
