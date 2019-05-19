@@ -13,4 +13,8 @@ app.get("/listings", function(req, res){
   res.sendFile(__dirname + "/listings.html");
 });
 
+app.get("/login", function(req, res){
+  res.sendFile(__dirname + "/login.html");
+});
+
 app.listen(port);
