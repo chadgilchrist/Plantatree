@@ -3,7 +3,11 @@
 <?php
 
 
+<<<<<<< HEAD
 	$connection = mysqli_connect("cmslamp14.aut.ac.nz", "scj3411", "Lego9819", "scj3411");
+=======
+	$connection = mysqli_connect("us-cdbr-iron-east-02.cleardb.net", "b44ace26fea6f3", "ea11b339", "heroku_c9cba001b0caa9d");
+>>>>>>> parent of cafb669... Update data.php
 
 	if (!$connection) {
 		echo "Error: Unable to connect to MySQL." . PHP_EOL;
