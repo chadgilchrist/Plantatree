@@ -24,16 +24,12 @@
     <form>
   	  <label>Username: <input type="text" name="namefield"> </label>
   	  <label><br>Password: <input type="text" name="pwdfield"> <br><br> </label>
-  	  <input name="submit" type="button" onClick="getData('/js/data.php','targetDiv', namefield.value, pwdfield.value) " value="Login">
+  	  <input name="submit" type="button" onClick="getData('data.php','targetDiv', namefield.value, pwdfield.value) " value="Login">
   	</form>
   </div>
 
-  <div id="targetDiv" class="w3-container">
-    <p>data will show here</p>
-  </div>
-
   <div class="w3-container w3-red">
-    <p ></p>
+
   </div>
 
   <div class="footer">
