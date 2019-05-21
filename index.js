@@ -1,10 +1,11 @@
 var express = require('express');
-var mysql = require('mysql');
+//var mysql = require('mysql');
 var app = express();
 var port = process.env.PORT || 3000;
 
 app.use(express.static('public'));
 
+/*
 var connection = mysql.createconncection({
   host: 'us-cdbr-iron-east-02.cleardb.net',
   user: 'b4d552e81ff3fc',
@@ -23,6 +24,8 @@ app.get("/db", function(req, res){
 
   }
 });
+
+*/
 
 app.get("/", function(req, res){
   //res.send("Test");
