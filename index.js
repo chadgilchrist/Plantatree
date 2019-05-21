@@ -40,8 +40,10 @@ app.get("/login", function(req, res){
   res.sendFile(__dirname + "/login.html");
 });
 
+/*
 app.get("/db", function(req, res)) {
 
 }
+*/
 
 app.listen(port);
