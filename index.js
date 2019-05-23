@@ -35,9 +35,9 @@ app.get("/cart", function(req, res){
 });
 
 app.get('/test',function(req,res){
-    db.query('SELECT * FROM products', function(err, result) {
+    connection.query('SELECT * FROM test', function(err, result) {
       if (err) throw err;
-      //console.log(result);
+      console.log(result);
       res.send(result);
     });
 });
