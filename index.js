@@ -17,4 +17,9 @@ app.get("/login", function(req, res){
   res.sendFile(__dirname + "/login.html");
 });
 
+app.get("/cart", function(req, res){
+  res.sendFile(__dirname + "/cart.html");
+});
+
+
 app.listen(port);
