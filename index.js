@@ -30,12 +30,15 @@ app.get("/tree", function(req, res){
     console.log(result);
     res.render(__dirname + "/tree1.html", {
         id: req.query.id,
-        name: result[0].product_name,
-        description: result[0].description,
-        price: result[0].price,
-        category: result[0].category,
-        growth_rate: result[0].growth_rate,
-        height: result[0].height
+        result: result[0]
+
+
+        // name: result[0].product_name,
+        // description: result[0].description,
+        // price: result[0].price,
+        // category: result[0].category,
+        // growth_rate: result[0].growth_rate,
+        // height: result[0].height
       });
   });
 });
