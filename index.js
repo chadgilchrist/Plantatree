@@ -55,7 +55,14 @@ app.get("/search", function(req, res){
 }); // listingsserach page then do results 0, 1, 2 etc
 
 app.get("/listings", function(req, res){
-  res.sendFile(__dirname + "/listings.html");
+  // res.sendFile(__dirname + "/listings.html");
+  connection.query('SELECT * FROM products', function(err, result) {
+    if (err) throw err;
+    console.log(result);
+    res.render(__dirname + "/listings.html", {
+        products: result
+      });
+  });
 });
 
 app.get("/login", function(req, res){
