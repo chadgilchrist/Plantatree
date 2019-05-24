@@ -44,12 +44,12 @@ app.get("/tree", function(req, res){
 app.get("/search", function(req, res){
   var connection = mysql.createConnection(db_config);
   connection.connect(function(err) {if (err) throw err;});
-  connection.query('SELECT * FROM products WHERE product_id = ?', req.query.id, function(err, result) {
+  console.log(req.query.q);
+  connection.query(`SELECT * FROM products WHERE product_name LIKE '%${req.query.q}%'`, function(err, result) {
     if (err) throw err;
     console.log(result);
     res.render(__dirname + "/listings.html", {
-        id: req.query.id,
-        name: result[0].product_name
+        products: result
       });
   });
   connection.end();
