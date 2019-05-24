@@ -38,7 +38,7 @@ app.get("/tree", function(req, res){
         height: result[0].height
       });
   });
-}); 
+});
 
 app.get("/search", function(req, res){
   connection.query('SELECT * FROM products WHERE product_id = ?', req.query.id, function(err, result) {
@@ -49,7 +49,7 @@ app.get("/search", function(req, res){
         name: result[0].product_name
       });
   });
-});
+}); // listingsserach page then do results 0, 1, 2 etc
 
 app.get("/listings", function(req, res){
   res.sendFile(__dirname + "/listings.html");
