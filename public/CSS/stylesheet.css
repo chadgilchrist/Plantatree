@@ -37,6 +37,12 @@ body {
 
 }
 
+.treeImage {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
 ul {
   list-style-type: none;
   font-family: Verdana;
