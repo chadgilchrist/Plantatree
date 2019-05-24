@@ -27,7 +27,7 @@ app.get("/tree", function(req, res){
   connection.query('SELECT * FROM products WHERE product_id = ?', req.query.id, function(err, result) {
     if (err) throw err;
     console.log(result);
-    res.render(__dirname + "/tree1.html", {
+    res.render(__dirname + "/products.html", {
         id: req.query.id,
         result: result[0]
         // name: result[0].product_name,
