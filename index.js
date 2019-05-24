@@ -28,9 +28,16 @@ app.get("/tree", function(req, res){
   connection.query('SELECT * FROM products WHERE product_id = ?', req.query.id, function(err, result) {
     if (err) throw err;
     console.log(result);
-    res.render(__dirname + "/tree1.html", {id: req.query.id, name: result[0].product_name});
+    res.render(__dirname + "/tree1.html", {
+        id: req.query.id,
+        name: result[0].product_name,
+        description: result[0].description,
+        price: result[0].price,
+        category: result[0].category,
+        growth_rate: result[0].growth_rate,
+        height: result[0].height
+      });
   });
-
 });
 
 app.get("/listings", function(req, res){
