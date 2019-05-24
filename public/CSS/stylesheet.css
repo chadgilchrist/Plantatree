@@ -1,7 +1,17 @@
 
+
+
 td {
+  font-family: Verdana;
+  font-size: 15px;
+  text-align: center;
   align: center;
-  background-color: grey;
+  width: 283px;
+  height: 300px;
+}
+
+tr {
+
 }
 
 a {
