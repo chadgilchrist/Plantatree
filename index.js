@@ -44,13 +44,11 @@ app.get("/tree", function(req, res){
 app.get("/search", function(req, res){
   var connection = mysql.createConnection(db_config);
   connection.connect(function(err) {if (err) throw err;});
-  console.log(req.query.q);
   connection.query(`SELECT * FROM products WHERE product_name LIKE '%${req.query.q}%'`, function(err, result) {
     if (err) throw err;
-    console.log(result);
     res.render(__dirname + "/listings.html", {
-        products: result
-      });
+      products: result
+    });
   });
   connection.end();
 }); // listingsserach page then do results 0, 1, 2 etc
