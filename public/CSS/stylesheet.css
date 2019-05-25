@@ -60,6 +60,34 @@ body {
   object-fit: cover;
 }
 
+.product-container {
+  padding: 0.01em 16px;
+  width: 868px;
+  margin: auto;
+}
+
+.tree-page {
+  background-color: #yellow;
+}
+
+.tree-desc {
+  font-family: Verdana;
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 0.01em 16px;
+}
+
+.tree-info {
+  float: right;
+}
+
+.tree-info p {
+  background-color: #orange;
+  font-family: Verdana;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
 ul {
   list-style-type: none;
   font-family: Verdana;
@@ -132,46 +160,3 @@ li a:hover {
 .tree-body {
   padding:0.01em 16px;
 }
-
-/*
-
-drop downbox
-
-
-
-ul li ul li {
-  list-style-type: none;
-  font-family: Verdana;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-ul li ul li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-ul li ul li:hover {
-  background: #111;
-}
-
-ul li {
-  display: inline-block;
-}
-
-ul li:hover ul {
-  display: block;
-}
-
-ul li ul {
-  position: absolute;
-  width: 150px;
-  display: none;
-}
-
-*/
