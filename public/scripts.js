@@ -28,3 +28,7 @@ function clearsearch() {
 function logon(user, pass) {
   window.location.href=`/logon?user=${user}&pass=${pass}`;
 }
+
+function signup(username, password, email) {
+  window.location.href=`/signup?username=${username}&password=${password}&email${email}`;
+}

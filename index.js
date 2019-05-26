@@ -56,6 +56,19 @@ app.get("/logon", function(req, res){
   connection.end();
 });
 
+app.get("/signup", function(req, res){
+  var connection = mysql.createConnection(db_config);
+  console.log(req.query.user);
+  console.log(req.query.pass);
+  connection.connect(function(err) {if (err) throw err;});
+  connection.query(`INSERT INTO users (username, PASSWORD, email, customer_status) VALUES ('${req.query.username}','${req.query.password}','${req.query.email}','user')`, function(err, result) {
+    if (err) throw err;
+    console.log(result);
+    res.sendFile(__dirname + "/index.html");
+  });
+  connection.end();
+});
+
 app.get("/search", function(req, res){
   var connection = mysql.createConnection(db_config);
   connection.connect(function(err) {if (err) throw err;});
