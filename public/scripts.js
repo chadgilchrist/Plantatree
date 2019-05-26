@@ -7,3 +7,7 @@ function search(term) {
 function clearsearch() {
   window.location.href='/listings';
 }
+
+function logon(user, pass) {
+  window.location.href=`/logon?user=${user}&pass=${pass}`;
+}

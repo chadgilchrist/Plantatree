@@ -41,6 +41,21 @@ app.get("/tree", function(req, res){
   connection.end();
 });
 
+app.get("/logon", function(req, res){
+  var connection = mysql.createConnection(db_config);
+  console.log(req.query.user);
+  console.log(req.query.pass);
+  connection.connect(function(err) {if (err) throw err;});
+  connection.query(`SELECT * FROM users WHERE username = '${req.query.user}' AND password = '${req.query.pass}'`, function(err, result) {
+    if (err) throw err;
+    console.log(result);
+    res.render(__dirname + "/accountpage.html", {
+      users: result
+    });
+  });
+  connection.end();
+});
+
 app.get("/search", function(req, res){
   var connection = mysql.createConnection(db_config);
   connection.connect(function(err) {if (err) throw err;});

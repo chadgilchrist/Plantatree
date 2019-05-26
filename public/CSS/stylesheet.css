@@ -1,5 +1,16 @@
 
+.login-fields {
+  display: inline-block;
+  width: 48%;
+}
 
+.login-signup {
+  display: inline-block;
+  padding:0.01em 16px;
+  float:right;
+  border-left: 1px solid grey;
+  width: 48%;
+}
 
 td {
   font-family: Verdana;

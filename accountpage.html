@@ -13,29 +13,20 @@
   <ul>
     <li><a href="/">Home</a></li>
     <li><a href="/listings">Listings</a></li>
-    <li style="float:right"><a href="/cart">Cart</a></li>
-    <li style="float:right"><a href="/login">Login</a></li>
   </ul>
 
   <div class="w3-container w3-red">
-    <h1>Login Page</h1>
+    <h1>Account Details</h1>
   </div>
 
   <div class="w3-container">
-    <div class="login-fields">
-      <form>
-    	  <label>Username: <input type="text" name="namefield"> </label>
-    	  <label><br>Password: <input type="text" name="pwdfield"> <br><br> </label>
-    	  <input name="submit" type="button" onClick="logon(namefield.value, pwdfield.value)" value="Login">
-    	</form>
-    </div>
-    <div class="login-signup">
-      <form>
-    	  <label>Username: <input type="text" name="namefield"> </label>
-    	  <label><br>Password: <input type="text" name="pwdfield"> <br><br> </label>
-    	  <input name="submit" type="button" onClick="logon(namefield.value, pwdfield.value)" value="Login">
-    	</form>
-    </div>
+    <p><% users.forEach(function(user){ %></p>
+    <p>User ID:         <%= user.user_id %></p>
+    <p>Username:        <%= user.username %></p>
+    <p>Password:        <%= user.password %></p>
+    <p>Email:           <%= user.email %></p>
+    <p>Customer Status: <%= user.customer_status %></p>
+    <% }) %>
   </div>
 
   <div class="w3-container w3-red">
