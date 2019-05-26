@@ -44,7 +44,24 @@ app.get("/tree", function(req, res){
 app.get("/search", function(req, res){
   var connection = mysql.createConnection(db_config);
   connection.connect(function(err) {if (err) throw err;});
-  connection.query(`SELECT * FROM products WHERE product_name LIKE '%${req.query.q}%'`, function(err, result) {
+
+  var queryString = `SELECT * FROM products WHERE price > '${req.query.pricemin}' AND price < '${req.query.pricemax}' AND height > '${req.query.heightmin}' AND height < '${req.query.heightmax}'`;
+
+  if(req.query.name){
+    queryString += ` AND product_name LIKE '%${req.query.name}%'`
+  }
+
+  if(req.query.category){
+    queryString += ` AND category LIKE '${req.query.category}'`
+  }
+
+  if(req.query.growthrate){
+    queryString += ` AND growth_rate LIKE '${req.query.growthrate}'`
+  }
+
+  console.log(queryString);
+
+  connection.query(queryString, function(err, result) {
     if (err) throw err;
     res.render(__dirname + "/listings.html", {
       products: result
