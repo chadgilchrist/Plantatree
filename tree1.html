@@ -12,27 +12,33 @@
   <ul>
     <li><a href="/">Home</a></li>
     <li><a href="/listings">Listings</a></li>
+    <li style="float:right"><a href="/cart">Cart</a></li>
+    <li style="float:right"><a href="/login">Login</a></li>
   </ul>
 
   <div class="w3-container w3-red">
     <h1><%= result.product_name %></h1>
   </div>
 
-  <div class="w3-container">
-    <p>
-        <img src="/treeimages/<%= result.product_id %>.jpg" class="treeImage">
-    </p>
-    <p><%= result.description %></p>
-    <p><%= result.price %></p>
-    <p><%= result.category %></p>
-    <p><%= result.growth_rate %></p>
-    <p><%= result.height %></p>
+  <div class="product-container">
+    <div class="tree-page">
+      <img src="/treeimages/<%= result.product_id %>.jpg" class="treeImage">
+    </div>
+    <div class="tree-info">
+      <p>Price: <%= result.price %></p>
+      <p>Catergory: <%= result.category %></p>
+      <p>Growth Rate: <%= result.growth_rate %></p>
+      <p>Height: <%= result.height %></p>
+    </div>
+    <div class="tree-desc">
+      <p><%= result.description %></p>
+    </div>
   </div>
 
   <div class="footer">
     <ul class="footer-ul">
       <li class="footer-li"><a href="/info/locations.html">Locations</a></li>
-      <li class="footer-li"><a href="/info/treeinformaton.html">Tree Information</a></li>
+      <li class="footer-li"><a href="/info/treeinformation.html">Tree Information</a></li>
     </ul>
     <ul class="footer-ul">
       <li class="footer-li"><a class="footer-a" href="/info/contact.html">Contact Info</a></li>
