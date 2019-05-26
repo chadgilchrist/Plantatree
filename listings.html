@@ -21,48 +21,58 @@
     <h1>Listings</h1>
   </div>
 
-  <div class="w3-container">
-    <label>Name<br/><input type="text" id="searchfield"> </label>
+  <div class="w3-container search-container" >
+    <div class="search-field">
+      <div class="w3-container">
+        <label>Name<br/><input type="text" id="searchfield"> </label>
+      </div>
+
+      <div class="w3-container button-align">
+        <input name="submit" type="button" onClick="search(searchfield.value, category.value, growthrate.value, pricemin.value, pricemax.value, heightmin.value, heightmax.value)" value="Search">
+        <input name="submit" type="button" onClick="clearsearch()" value="Clear">
+      </div>
+    </div>
+
+    <div class="search-field">
+      <div class="w3-container">
+        <label>Category<br/></label>
+        <select name="category" id="category">
+          <option value="">All</option>
+          <option value="Fruit Tree">Fruit Tree</option>
+          <option value="House Plant">House Plant</option>
+          <option value="Hedges">Hedge</option>
+          <option value="NZ Native">NZ Native</option>
+          <option value="Evergreen">Evergreen</option>
+          <option value="Palm Tree">Palm Tree</option>
+        </select>
+      </div>
+
+      <div class="w3-container">
+        <label>Growth Rate<br/></label>
+        <select name="growthrate" id="growthrate">
+          <option value="">All</option>
+          <option value="Slow">Slow</option>
+          <option value="Medium">Medium</option>
+          <option value="Fast">Fast</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="search-field">
+      <div class="w3-container">
+        <label>Price<br/></label>
+        <input type="number" step="0.1" min="0" max="1000" value="0" id="pricemin">
+        <input type="number" step="0.1" min="0" max="1000" value="1000" id="pricemax">
+      </div>
+
+      <div class="w3-container">
+        <label>Height<br/></label>
+        <input type="number" step="0.1" min="0" max="4000" value="0" id="heightmin">
+        <input type="number" step="0.1" min="0" max="4000" value="4000" id="heightmax">
+      </div>
+    </div>
   </div>
 
-  <div class="w3-container">
-    <label>Category<br/></label>
-    <form action="/action_page.php">
-      <select name="category">
-        <option value="Fruit Tree">Fruit Tree</option>
-        <option value="House Plant">House Plant</option>
-        <option value="Hedges">Hedge</option>
-        <option value="NZ Native">NZ Native</option>
-        <option value="Evergreen">Evergreen</option>
-        <option value="Palm Tree">Palm Tree</option>
-      </select>
-    </form>
-  </div>
-
-  <div class="w3-container">
-    <label>Price<br/></label>
-    <input type="number" step="0.1" min="0" max="1000" value="0">
-    <input type="number" step="0.1" min="0" max="1000" value="1000">
-  </div>
-
-  <div class="w3-container">
-    <label>Height<br/></label>
-    <input type="number" step="0.1" min="0" max="1000" value="0">
-    <input type="number" step="0.1" min="0" max="1000" value="1000">
-  </div>
-
-  <div class="w3-container">
-    <label>Growth Rate<br/></label>
-    <input type="number" step="0.1" min="0" max="1000" value="0">
-    <input type="number" step="0.1" min="0" max="1000" value="1000">
-  </div>
-
-  <br/>
-
-  <div class="w3-container">
-    <input name="submit" type="button" onClick="search(searchfield.value)" value="Search">
-    <input name="submit" type="button" onClick="clearsearch()" value="Clear">
-  </div>
 
   <div class="w3-container tree-list">
     <% products.forEach(function(product){ %>
@@ -70,7 +80,7 @@
         <a href="/tree?id=<%= product.product_id %>">
           <img src="/treeimages/<%= product.product_id %>.jpg" class="treeImage">
           <br/>
-          <%= product.product_name %>
+          <%= product.product_name %> ($<%= product.price %>)
         </a>
       </div>
     <% }) %>

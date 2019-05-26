@@ -171,9 +171,21 @@ li a:hover {
 .tree-body {
   padding:0.01em 16px;
 }
-<<<<<<< HEAD
 
+.search-container{
+  margin-top: 15px;
+  font-size: 0;
+}
 
+.search-field {
+  width: 33.33%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.button-align{
+  margin-top: 15px;
+}
 
 /*
 
@@ -217,5 +229,3 @@ ul li ul {
 }
 
 */
-=======
->>>>>>> 1df1374aa9ec51bb829cf047aaa74ee697497348
